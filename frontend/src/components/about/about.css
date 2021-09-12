@@ -1,0 +1,14 @@
+.about {
+    background: #ffffff9e;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about p {
+    font-size: 18px;
+}
+.about h1 {
+    background: #3f51b5;
+    color: white;
+    margin: 0;
+}
