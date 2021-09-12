@@ -1,0 +1,18 @@
+img{
+    width:100%
+}
+
+
+.wrapper {
+    display: inline-grid;
+    background: #ffffffbf;
+    padding: 30px;
+    color: #39393A;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    width: 400px;
+    border: 3px solid #39393a91;
+    margin-top:10%;
+    margin-left: -7%;
+    
+}

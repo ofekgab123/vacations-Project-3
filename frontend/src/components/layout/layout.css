@@ -1,0 +1,17 @@
+.layout {
+    height: 100%;
+    box-sizing: border-box;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/assets/images/image.jpg");
+    overflow: auto;
+
+}
+
+.layout > main {
+    margin-top: 50px;
+}
+
+

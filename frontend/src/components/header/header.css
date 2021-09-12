@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC&display=swap');
+
+
+.navlinks{
+    margin-top:200px
+}
+
+.header p {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #FFF1D0;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+
+.header .navlinks {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.header .navlinks a {
+    color: white;
+    margin: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.header .navlinks a:hover {
+   color:black;
+}
+
+.logout{  
+margin-top:18px;
+margin-left:20px
+}
+
+.logoutButton{
+    width:200px;
+}
+
+.welcome-admin{
+   
+    margin-top: 21px;
+    margin-left:150px;
+}
+.welcome-newuser{ 
+    
+margin-top:20px;
+ margin-left: 200px;
+ 
+}
