@@ -1,0 +1,9 @@
+{
+    "isProduction":true,
+    "database":{
+        "host": "eu-cdbr-west-01.cleardb.com",
+       "user":"bac26210026aad",
+       "password":":f7989e7a",
+        "name": "heroku_9464090e6435c15"
+    }
+}
