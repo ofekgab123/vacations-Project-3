@@ -3,7 +3,6 @@ import './layout.css';
 import { Header } from '../header/header';
 import { BrowserRouter} from 'react-router-dom';
 import { Container } from '@material-ui/core';
-
 import Routing from '../Routing/Routing';
 
 
