@@ -84,7 +84,7 @@ export class AdminPanel extends Component<any, AdminPanelState> {
         return (
             <div className='adminPanel'>
                 {!this.state.user.isAdmin ? <PageNotFound /> :
-                    <React.Fragment>
+                  <div>
                         <Button variant="contained" color="primary">
                             <AddIcon />
                             <NavLink to='/add-vacation' exact>Add Vacation</NavLink>
@@ -120,7 +120,7 @@ export class AdminPanel extends Component<any, AdminPanelState> {
                                     </tr>)}
                             </tbody>
                         </table>
-                    </React.Fragment>
+                        </div>
                 }
             </div>
         );
