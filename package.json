@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"cd frontend && npm start\"",
-    "server": "node app.js"
+    "start": "node app"
   },
   "author": "",
   "license": "ISC",
