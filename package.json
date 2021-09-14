@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "npm i && cd frontend && npm i && cd .. && concurrently \"npm run server\" \"cd frontend && npm start\"",
+    "start": "concurrently \"npm run server\" \"cd frontend && npm start\"",
     "server": "node app.js"
   },
   "author": "",
