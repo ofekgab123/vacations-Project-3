@@ -107,7 +107,7 @@ export class RegisterPage extends Component<any, RegisterState> {
             body: JSON.stringify(this.state.user)
         };
 
-        fetch("http://localhost:3000/api/register", options)
+        fetch("http://localhost:3001/api/register", options)
             .then(async response => {
                 if (!response.ok)
                     throw new Error(await response.text());
@@ -143,7 +143,7 @@ export class RegisterPage extends Component<any, RegisterState> {
             body: JSON.stringify(store.getState().user)
         };
         // save to JWT 
-        fetch("http://localhost:3000/api/login/login-save", optionsJWT)
+        fetch("http://localhost:3001/api/login/login-save", optionsJWT)
             .then(response => response.json())
             // save in localstorage for auto login with unique token
             .then(res => localStorage.setItem('token', res.token))

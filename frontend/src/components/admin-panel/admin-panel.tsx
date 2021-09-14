@@ -36,7 +36,7 @@ export class AdminPanel extends Component<any, AdminPanelState> {
     }
     public componentDidMount = () => {
         if (store.getState().vacations.length < 1) {
-            fetch('http://localhost:3000/api/vacations')
+            fetch('http://localhost:3001/api/vacations')
                 .then(res => res.json())
                 .then(vacations => {
                     const action: Action = {
@@ -68,7 +68,7 @@ export class AdminPanel extends Component<any, AdminPanelState> {
             body: JSON.stringify(vacation)
         };
 
-        fetch(`http://localhost:3000/api/vacations/delete-vacation`, options)
+        fetch(`http://localhost:3001/api/vacations/delete-vacation`, options)
             .then(() => {
                 alert("Vacation has been successfully deleted.");
                 const action: Action = {

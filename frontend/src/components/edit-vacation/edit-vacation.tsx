@@ -26,7 +26,7 @@ interface AddVacationState {
 }
 export class EditVacation extends Component<any, AddVacationState> {
     private unsubscribeStore: Unsubscribe;
-    private socket = io.connect("http://localhost:3000");
+    private socket = io.connect("http://localhost:3001");
     public constructor(props: any) {
         super(props);
         this.state = {
@@ -48,7 +48,7 @@ export class EditVacation extends Component<any, AddVacationState> {
 
     public componentDidMount = () => {
         const id = this.props.match.params.id;
-        fetch(`http://localhost:3000/api/vacations/${id}`)
+        fetch(`http://localhost:3001/api/vacations/${id}`)
             .then(res => res.json())
             .then(vacation => {
                 vacation.fromDate = new Date(vacation.fromDate);
@@ -159,7 +159,7 @@ export class EditVacation extends Component<any, AddVacationState> {
             body: formData
         };
 
-        fetch('http://localhost:3000/api/vacations/update-vacation', options)
+        fetch('http://localhost:3001/api/vacations/update-vacation', options)
             .then(res => res.json())
             .then(vacation => {
                 const action: Action = {

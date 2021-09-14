@@ -66,7 +66,7 @@ export class VactionBox extends Component<any, VactionBoxState> {
             body: JSON.stringify(sendInfo)
         };
 
-        fetch("http://localhost:3000/api/vacations/followVacation", options)
+        fetch("http://localhost:3001/api/vacations/followVacation", options)
             .then(response => response.json())
             .then(res => {
                 this.updateState();
@@ -81,7 +81,7 @@ export class VactionBox extends Component<any, VactionBoxState> {
             method: "DELETE"
         };
 
-        fetch(`http://localhost:3000/api/vacations/delete/${vacationID}/${userID}`, options)
+        fetch(`http://localhost:3001/api/vacations/delete/${vacationID}/${userID}`, options)
             .then(res => {
                 const vacations = [...this.state.vacations]
                 const vacation = vacations.find(v => v.vacationID === this.props.id);
@@ -94,7 +94,7 @@ export class VactionBox extends Component<any, VactionBoxState> {
     }
 
     private updateState = () => {
-        fetch(`http://localhost:3000/api/vacations/get-followed-vacations/${this.state.user.userID}`)
+        fetch(`http://localhost:3001/api/vacations/get-followed-vacations/${this.state.user.userID}`)
             .then(res => res.json())
             .then(followedVacations => {
                 const action: Action = {

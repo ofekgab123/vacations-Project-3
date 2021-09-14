@@ -1,4 +1,4 @@
-const PORT = process.env.Port || 3000;
+const PORT = process.env.Port || 3001;
 globalThis.config = require(process.env.NODE_ENV === "production"
 ? "./configs/config-prod.json"
 : "./configs/config-dev.json");

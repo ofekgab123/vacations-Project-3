@@ -40,7 +40,7 @@ export class Chart extends Component<any, ChartState> {
       }
     };
 
-    fetch('http://localhost:3000/api/vacations/followed/get-all', options)
+    fetch('http://localhost:3001/api/vacations/followed/get-all', options)
       .then(res => res.json())
       .then(vacations => this.arrangeVacations(vacations))
       .catch(err => alert(err));

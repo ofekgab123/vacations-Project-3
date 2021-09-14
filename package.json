@@ -4,11 +4,13 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start":"node app"
+    "start": "concurrently \"npm run server\" \"cd frontend && npm start\"",
+    "server": "node app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^6.2.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-fileupload": "^1.1.6",

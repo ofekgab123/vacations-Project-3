@@ -70,7 +70,7 @@ export class LoginPage extends Component<{}, LoginState> {
             body: JSON.stringify(this.state.loginInput)
         };
 
-        fetch("http://localhost:3000/api/login", options)
+        fetch("http://localhost:3001/api/login", options)
             .then(async response => {
                 if (!response.ok)
                     throw new Error(await response.text());
@@ -104,7 +104,7 @@ export class LoginPage extends Component<{}, LoginState> {
             body: JSON.stringify(store.getState().user)
         };
         // save to JWT 
-        fetch("http://localhost:3000/api/login/login-save", optionsJWT)
+        fetch("http://localhost:3001/api/login/login-save", optionsJWT)
             .then(response => response.json())
             // save in localstorage for auto login with unique token
             .then(res => localStorage.setItem('token', res.token))

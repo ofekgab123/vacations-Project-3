@@ -53,7 +53,7 @@ export class Header extends Component<any, HeaderState> {
             }
         };
         // check JWT token
-        fetch("http://localhost:3000/api/login/login-check", options)
+        fetch("http://localhost:3001/api/login/login-check", options)
             .then(response => response.json())
             .then(res => {
                 if (res.name === 'JsonWebTokenError') {

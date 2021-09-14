@@ -21,7 +21,7 @@ interface HomeState {
 
 export class Home extends Component<any, HomeState> {
     private unsubscribeStore: Unsubscribe;
-    private socket = io.connect("http://localhost:3000");
+    private socket = io.connect("http://localhost:3001");
     public constructor(props: any) {
         super(props);
         this.state = {
@@ -45,7 +45,7 @@ export class Home extends Component<any, HomeState> {
     }
     public componentDidMount = () => {
         if (store.getState().vacations.length === 0) {
-            fetch('http://localhost:3000/api/vacations')
+            fetch('http://localhost:3001/api/vacations')
                 .then(res => res.json())
                 .then(vacations => {
                     const action: Action = {
@@ -82,7 +82,7 @@ export class Home extends Component<any, HomeState> {
 
     private checkFollowedVacations = () => {
         if (this.state.isLogin === true && this.state.followedVacations.length <= 0) {
-            fetch(`http://localhost:3000/api/vacations/get-followed-vacations/${this.state.user.userID}`)
+            fetch(`http://localhost:3001/api/vacations/get-followed-vacations/${this.state.user.userID}`)
                 .then(res => res.json())
                 .then(followedVacations => {
                     const action: Action = {
