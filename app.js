@@ -33,7 +33,7 @@ server.use('/api/vacations', vacationController);
 
 
 server.use("*",(req,res)=>{
-    res.sendFile(path.join(__dirname,"./frontend/public/index.html"))
+    res.sendFile(path.join(__dirname,"./frontend/index.html"))
 })
 const expressListener = server.listen(PORT, () => console.log('server up'));
 const socketIOServer = socketIO(expressListener);
